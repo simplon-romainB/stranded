@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://mushrooms.gd" type="Script" id=1]
+[ext_resource path="res://tileset/champi.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 658.286, 466.285 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 19 )
+
+[node name="killermushs" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="mushrooms" type="Sprite" parent="Area2D"]
+position = Vector2( 430, 170 )
+scale = Vector2( 0.588439, 0.418095 )
+texture = ExtResource( 2 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Area2D/mushrooms"]
+scale = Vector2( 6, 6 )
+shape = SubResource( 1 )
+
+[node name="plateformechampi" type="StaticBody2D" parent="Area2D/mushrooms"]
+position = Vector2( -730.747, -406.606 )
+scale = Vector2( 1.69941, 2.3918 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D/mushrooms/plateformechampi"]
+position = Vector2( 430, 159.651 )
+scale = Vector2( 0.0607639, 0.0643383 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 430, 170 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="pressed" from="Area2D/mushrooms/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="released" from="Area2D/mushrooms/TouchScreenButton" to="." method="_on_TouchScreenButton_released"]

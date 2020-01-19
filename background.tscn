@@ -1,0 +1,917 @@
+[gd_scene load_steps=128 format=2]
+
+[ext_resource path="res://background2.gd" type="Script" id=1]
+[ext_resource path="res://woodenNains.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tileset/trappe.png" type="Texture" id=3]
+[ext_resource path="res://wooden.gd" type="Script" id=4]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=5]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/2.png" type="Texture" id=7]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/3.png" type="Texture" id=8]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/4.png" type="Texture" id=9]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/5.png" type="Texture" id=10]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/6.png" type="Texture" id=11]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/7.png" type="Texture" id=12]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/8.png" type="Texture" id=13]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/9.png" type="Texture" id=14]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/10.png" type="Texture" id=15]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/11.png" type="Texture" id=16]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/12.png" type="Texture" id=17]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/13.png" type="Texture" id=18]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/14.png" type="Texture" id=19]
+[ext_resource path="res://sprites/monsters/Dragon qui vole/15.png" type="Texture" id=20]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-17.png" type="Texture" id=21]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-18.png" type="Texture" id=22]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-19.png" type="Texture" id=23]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-20.png" type="Texture" id=24]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-21.png" type="Texture" id=25]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-22.png" type="Texture" id=26]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-23.png" type="Texture" id=27]
+[ext_resource path="res://tileset/MG/ASSEMBLAGE_02-24.png" type="Texture" id=28]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-05.png" type="Texture" id=29]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-06.png" type="Texture" id=30]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-07.png" type="Texture" id=31]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-08.png" type="Texture" id=32]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-11.png" type="Texture" id=33]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-12.png" type="Texture" id=34]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-13.png" type="Texture" id=35]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-14.png" type="Texture" id=36]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-15.png" type="Texture" id=37]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-16.png" type="Texture" id=38]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-17.png" type="Texture" id=39]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-18.png" type="Texture" id=40]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-19.png" type="Texture" id=41]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-20.png" type="Texture" id=42]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-21.png" type="Texture" id=43]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-22.png" type="Texture" id=44]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-23.png" type="Texture" id=45]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-24.png" type="Texture" id=46]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-09.png" type="Texture" id=47]
+[ext_resource path="res://tileset/BG/ASSEMBLAGE-10.png" type="Texture" id=48]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-17.png" type="Texture" id=49]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-20.png" type="Texture" id=50]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-21.png" type="Texture" id=51]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-22.png" type="Texture" id=52]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-18.png" type="Texture" id=53]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-19.png" type="Texture" id=54]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-23.png" type="Texture" id=55]
+[ext_resource path="res://tileset/FG/ASSEMBLAGE_02-24.png" type="Texture" id=56]
+[ext_resource path="res://player.gd" type="Script" id=57]
+[ext_resource path="res://sprites/player/Perso principal courir/1.png" type="Texture" id=58]
+[ext_resource path="res://sprites/player/Perso principal courir/2.png" type="Texture" id=59]
+[ext_resource path="res://sprites/player/Perso principal courir/3.png" type="Texture" id=60]
+[ext_resource path="res://sprites/player/Perso principal courir/4.png" type="Texture" id=61]
+[ext_resource path="res://sprites/player/Perso principal courir/5.png" type="Texture" id=62]
+[ext_resource path="res://sprites/player/Perso principal courir/6.png" type="Texture" id=63]
+[ext_resource path="res://sprites/player/Perso principal courir/7.png" type="Texture" id=64]
+[ext_resource path="res://sprites/player/Perso principal courir/8.png" type="Texture" id=65]
+[ext_resource path="res://sprites/player/Perso principal courir/9.png" type="Texture" id=66]
+[ext_resource path="res://sprites/player/Perso principal courir/10.png" type="Texture" id=67]
+[ext_resource path="res://Area2D2.gd" type="Script" id=68]
+[ext_resource path="res://tileset/pierre.png" type="Texture" id=69]
+[ext_resource path="res://Node2D.gd" type="Script" id=70]
+[ext_resource path="res://tileset/arbre_interactif.png" type="Texture" id=71]
+[ext_resource path="res://catapulte.tscn" type="PackedScene" id=72]
+[ext_resource path="res://mushrooms.tscn" type="PackedScene" id=73]
+[ext_resource path="res://tileset/romanarmy.png" type="Texture" id=74]
+[ext_resource path="res://tileset/baril.png" type="Texture" id=75]
+[ext_resource path="res://tileset/barrel.png" type="Texture" id=76]
+[ext_resource path="res://sprites/monsters/téléchargement.png" type="Texture" id=77]
+[ext_resource path="res://sprites/player/sketch-police-man-flying-gyrocopter-600w-1459663484.jpg" type="Texture" id=78]
+[ext_resource path="res://sprites/player/bridge.jpg" type="Texture" id=79]
+[ext_resource path="res://sounds/16461.wav" type="AudioStream" id=80]
+[ext_resource path="res://tileset/tou.png" type="Texture" id=81]
+[ext_resource path="res://tower.gd" type="Script" id=82]
+[ext_resource path="res://tileset/Calque 2.png" type="Texture" id=83]
+[ext_resource path="res://tileset/Calque 1.png" type="Texture" id=84]
+[ext_resource path="res://tileset/chateau.png" type="Texture" id=85]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 120, 120 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "vol",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 720, 60 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 1210, 60 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 4380, 60 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 1450, 60 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 3390, 63.5 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 590, 70 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 18.5714
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id=13]
+radius = 20.0
+height = 87.7467
+
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 30.0
+height = 160.0
+
+[sub_resource type="CapsuleShape2D" id=15]
+
+[sub_resource type="CapsuleShape2D" id=16]
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 30, 140 )
+
+[sub_resource type="GDScript" id=18]
+script/source = "extends Sprite
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 40, 180 )
+
+[sub_resource type="CapsuleShape2D" id=20]
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 203.348, 269.139 )
+
+[sub_resource type="CapsuleShape2D" id=22]
+radius = 203.352
+
+[sub_resource type="CapsuleShape2D" id=23]
+
+[sub_resource type="CircleShape2D" id=24]
+
+[sub_resource type="CapsuleShape2D" id=25]
+radius = 80.0
+height = 0.0
+
+[sub_resource type="RectangleShape2D" id=26]
+
+[sub_resource type="CapsuleShape2D" id=27]
+radius = 15.0
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 110, 310 )
+
+[sub_resource type="RectangleShape2D" id=29]
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 40, 110 )
+
+[sub_resource type="CapsuleShape2D" id=31]
+
+[sub_resource type="CapsuleShape2D" id=32]
+
+[sub_resource type="CapsuleShape2D" id=33]
+
+[sub_resource type="RectangleShape2D" id=34]
+
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 60, 1950 )
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 667.081, 43.6621 )
+
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 430, 40 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 490, 30 )
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 283.018, 30 )
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 690, 40 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 604.401, 40 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 1630, 40 )
+
+[node name="background" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -860.0 ]
+}
+
+[node name="woodenNains" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5990, 610 )
+z_index = 1
+
+[node name="wooden" type="Sprite" parent="."]
+position = Vector2( 3940, 630 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="wooden"]
+scale = Vector2( 13, 13 )
+shape = SubResource( 1 )
+shape_visible = false
+passby_press = true
+
+[node name="Area2D" type="Area2D" parent="wooden"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wooden/Area2D"]
+shape = SubResource( 2 )
+
+[node name="dragon" type="KinematicBody2D" parent="."]
+z_index = 1
+script = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="dragon"]
+margin_left = 300.0
+margin_top = -240.0
+margin_right = 420.0
+margin_bottom = -188.0
+
+[node name="Label" type="Label" parent="dragon/Panel"]
+margin_right = 120.0
+margin_bottom = 50.0
+text = " 
+"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dragon"]
+shape = SubResource( 3 )
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="dragon"]
+position = Vector2( 512.329, 299.995 )
+rotating = true
+current = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="dragon"]
+position = Vector2( -780, 290 )
+frames = SubResource( 4 )
+animation = "vol"
+frame = 1
+playing = true
+
+[node name="Tween" type="Tween" parent="dragon"]
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="dragon"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 1850, -345 )
+z_index = 1
+motion_scale = Vector2( 1, 0.1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -220, 605 )
+texture = ExtResource( 21 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3010, 605 )
+texture = ExtResource( 22 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 6230, 605 )
+texture = ExtResource( 23 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 9460, 605 )
+texture = ExtResource( 24 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 12690, 605 )
+texture = ExtResource( 25 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 15920, 591.08 )
+texture = ExtResource( 26 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 19150, 605 )
+texture = ExtResource( 27 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 22380, 605 )
+texture = ExtResource( 28 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 1850, -178 )
+motion_scale = Vector2( 0.8, 0.15 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 12690, -1832 )
+texture = ExtResource( 29 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 15920, -1832 )
+texture = ExtResource( 30 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 19150, -1842 )
+texture = ExtResource( 31 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 22380, -1842 )
+texture = ExtResource( 32 )
+
+[node name="Sprite11" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 6230, -692 )
+texture = ExtResource( 33 )
+
+[node name="Sprite12" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 9460, -692 )
+texture = ExtResource( 34 )
+
+[node name="Sprite13" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 12690, -682 )
+texture = ExtResource( 35 )
+
+[node name="Sprite14" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 15920, -682 )
+texture = ExtResource( 36 )
+
+[node name="Sprite15" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 19150, -692 )
+texture = ExtResource( 37 )
+
+[node name="Sprite16" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 22380, -702 )
+texture = ExtResource( 38 )
+
+[node name="Sprite17" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( -230, 453.878 )
+texture = ExtResource( 39 )
+
+[node name="Sprite18" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 3000, 453.878 )
+texture = ExtResource( 40 )
+
+[node name="Sprite19" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 6230, 453.878 )
+texture = ExtResource( 41 )
+
+[node name="Sprite20" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 9460, 453.878 )
+texture = ExtResource( 42 )
+
+[node name="Sprite21" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 12690, 468 )
+texture = ExtResource( 43 )
+
+[node name="Sprite22" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 15920, 468 )
+scale = Vector2( 1.00139, 1 )
+texture = ExtResource( 44 )
+
+[node name="Sprite23" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 19150, 458 )
+texture = ExtResource( 45 )
+
+[node name="Sprite24" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 22380, 448 )
+texture = ExtResource( 46 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( -230, -692 )
+texture = ExtResource( 47 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 3000, -692 )
+texture = ExtResource( 48 )
+
+[node name="sol" type="StaticBody2D" parent="."]
+position = Vector2( 440, 720 )
+
+[node name="Sprite" type="Sprite" parent="sol"]
+position = Vector2( 1180, -430 )
+texture = ExtResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sol"]
+position = Vector2( 240, 100 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="sol"]
+position = Vector2( 2580, 100 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="sol"]
+position = Vector2( 11750, 100 )
+shape = SubResource( 7 )
+
+[node name="Sprite4" type="Sprite" parent="sol"]
+position = Vector2( 10870, -430 )
+texture = ExtResource( 50 )
+
+[node name="Sprite5" type="Sprite" parent="sol"]
+position = Vector2( 14100, -430 )
+texture = ExtResource( 51 )
+
+[node name="Sprite6" type="Sprite" parent="sol"]
+position = Vector2( 17330, -430 )
+texture = ExtResource( 52 )
+
+[node name="Sprite2" type="Sprite" parent="sol"]
+position = Vector2( 4410, -430 )
+texture = ExtResource( 53 )
+
+[node name="Sprite3" type="Sprite" parent="sol"]
+position = Vector2( 7640, -430 )
+texture = ExtResource( 54 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="sol"]
+position = Vector2( 5160, 100 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="sol"]
+position = Vector2( 20670, 100 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="sol"]
+position = Vector2( 16690, 110 )
+shape = SubResource( 10 )
+disabled = true
+
+[node name="Sprite7" type="Sprite" parent="sol"]
+position = Vector2( 20560, -430 )
+texture = ExtResource( 55 )
+
+[node name="Sprite8" type="Sprite" parent="sol"]
+position = Vector2( 23790, -430 )
+texture = ExtResource( 56 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 50, 640 )
+scale = Vector2( 1.75, 1.75 )
+z_index = 1
+script = ExtResource( 57 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 10, -10 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 11 )
+animation = "run"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 10, 0 )
+shape = SubResource( 12 )
+
+[node name="Timer" type="Timer" parent="player"]
+wait_time = 0.6
+
+[node name="RayCast2D" type="RayCast2D" parent="player"]
+position = Vector2( 30, 25 )
+enabled = true
+
+[node name="Visibility2D" type="VisibilityNotifier2D" parent="player"]
+position = Vector2( 10, -48.125 )
+scale = Vector2( 0.5, 1 )
+
+[node name="cameraplayer" type="Camera2D" parent="player"]
+position = Vector2( 5, -109.005 )
+smoothing_enabled = true
+smoothing_speed = 10.0
+
+[node name="impactmur" type="RayCast2D" parent="player"]
+position = Vector2( 0, -48.125 )
+rotation = -1.5708
+scale = Vector2( 0.75, 0.75 )
+enabled = true
+
+[node name="impactmurgauche" type="RayCast2D" parent="player"]
+visible = false
+position = Vector2( 0, -48.125 )
+rotation = 1.90415
+scale = Vector2( 1, 0.5 )
+enabled = true
+
+[node name="hitbox" type="Area2D" parent="player"]
+
+[node name="plongeurshitbox" type="CollisionShape2D" parent="player/hitbox"]
+position = Vector2( 10, 3.87335 )
+shape = SubResource( 13 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 3030, 420 )
+scale = Vector2( 2, 1 )
+script = ExtResource( 68 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( -175, 79.2413 )
+shape = SubResource( 14 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Area2D2"]
+position = Vector2( -175, 60 )
+scale = Vector2( 2.5, 5 )
+shape = SubResource( 15 )
+passby_press = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+position = Vector2( -120, 168.281 )
+scale = Vector2( 0.3, 0.5 )
+texture = ExtResource( 69 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 1970, 591 )
+script = ExtResource( 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tween" type="Tween" parent="Node2D"]
+playback_process_mode = 0
+
+[node name="AnimatedSprite" type="Sprite" parent="Node2D"]
+position = Vector2( 0, -160 )
+texture = ExtResource( 71 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Node2D"]
+position = Vector2( -21.0073, -120 )
+scale = Vector2( 3, 14 )
+shape = SubResource( 16 )
+passby_press = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+position = Vector2( -410, 160 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2( 388.993, -280 )
+scale = Vector2( 1, 2 )
+shape = SubResource( 17 )
+
+[node name="Tween2" type="Tween" parent="Node2D"]
+
+[node name="Tween3" type="Tween" parent="Node2D"]
+
+[node name="catapulte" parent="." instance=ExtResource( 72 )]
+position = Vector2( 2660, 290 )
+scale = Vector2( 0.110822, 0.125531 )
+script = SubResource( 18 )
+
+[node name="killermushs" parent="." instance=ExtResource( 73 )]
+position = Vector2( 6950, 440 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killermushs"]
+position = Vector2( 430, 160.001 )
+shape = SubResource( 19 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.65
+
+[node name="elevator" type="TouchScreenButton" parent="."]
+position = Vector2( 12900, 530 )
+scale = Vector2( 4, 4 )
+z_index = 1
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="army" type="Area2D" parent="."]
+position = Vector2( 20376.2, 759.25 )
+scale = Vector2( 0.2, 0.2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="army"]
+texture = ExtResource( 74 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="army"]
+shape = SubResource( 21 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 20360, 410 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+texture = ExtResource( 75 )
+
+[node name="barrel" type="KinematicBody2D" parent="."]
+position = Vector2( 20430, 480 )
+scale = Vector2( 0.2, 0.2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="barrel"]
+position = Vector2( -269.141, -7.98242 )
+texture = ExtResource( 76 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrel"]
+position = Vector2( -269.141, -7.98242 )
+shape = SubResource( 22 )
+
+[node name="barrelButton" type="TouchScreenButton" parent="barrel"]
+position = Vector2( -269.141, -7.98242 )
+scale = Vector2( 12, 12 )
+shape = SubResource( 23 )
+passby_press = true
+
+[node name="cavaliers" type="KinematicBody2D" parent="."]
+position = Vector2( 15820, 680 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="cavaliers"]
+scale = Vector2( 0.61194, 0.659574 )
+texture = ExtResource( 77 )
+
+[node name="vavalierstouch" type="TouchScreenButton" parent="cavaliers"]
+scale = Vector2( 10, 10 )
+shape = SubResource( 24 )
+passby_press = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="cavaliers"]
+
+[node name="cavaliersarea" type="Area2D" parent="cavaliers"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cavaliers/cavaliersarea"]
+shape = SubResource( 25 )
+
+[node name="gyrocopter" type="Area2D" parent="."]
+position = Vector2( 22180, 100 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="gyrocopter"]
+position = Vector2( -1.52588e-005, 0 )
+scale = Vector2( 0.3, 0.305195 )
+texture = ExtResource( 78 )
+
+[node name="gyrotouch" type="TouchScreenButton" parent="gyrocopter"]
+scale = Vector2( 10, 10 )
+shape = SubResource( 26 )
+
+[node name="Tween" type="Tween" parent="gyrocopter"]
+
+[node name="barreldrop" type="KinematicBody2D" parent="."]
+position = Vector2( 22170, 210 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="barreldrop"]
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 76 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barreldrop"]
+scale = Vector2( 2, 2 )
+shape = SubResource( 27 )
+
+[node name="urukwood" parent="." instance=ExtResource( 2 )]
+position = Vector2( 22170, 630 )
+
+[node name="pontlevis" type="KinematicBody2D" parent="."]
+position = Vector2( 25200, 825.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pont" type="Sprite" parent="pontlevis"]
+
+[node name="bridge" type="Sprite" parent="pontlevis/pont"]
+rotation = 1.5708
+scale = Vector2( 1.32031, 0.460938 )
+texture = ExtResource( 79 )
+offset = Vector2( -250, 0 )
+
+[node name="collisionpont" type="CollisionShape2D" parent="pontlevis"]
+position = Vector2( 10, -300 )
+shape = SubResource( 28 )
+
+[node name="spambridge" type="TouchScreenButton" parent="pontlevis"]
+position = Vector2( 10, -310 )
+scale = Vector2( 10, 30 )
+shape = SubResource( 29 )
+
+[node name="plongeurstimer" type="Timer" parent="."]
+
+[node name="dragonfiretimer" type="Timer" parent="."]
+wait_time = 7.5
+
+[node name="dragoncry" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 80 )
+volume_db = 8.104
+
+[node name="dragonbreathtimer" type="Timer" parent="."]
+wait_time = 3.52
+one_shot = true
+
+[node name="magician3timer" type="Timer" parent="."]
+wait_time = 10.48
+one_shot = true
+
+[node name="plongeurstimer3" type="Timer" parent="."]
+wait_time = 1.8
+
+[node name="magician4timer" type="Timer" parent="."]
+wait_time = 18.86
+one_shot = true
+
+[node name="plongeurs4timer" type="Timer" parent="."]
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="dragontween" type="Tween" parent="."]
+
+[node name="cameratween" type="Tween" parent="."]
+
+[node name="checkpoint" type="Area2D" parent="."]
+position = Vector2( 8560, 640 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint"]
+shape = SubResource( 30 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="httpsave" type="HTTPRequest" parent="."]
+
+[node name="tower" type="Sprite" parent="."]
+position = Vector2( 9920, 380 )
+texture = ExtResource( 81 )
+script = ExtResource( 82 )
+
+[node name="pillar1" type="TouchScreenButton" parent="tower"]
+position = Vector2( -80, 190 )
+scale = Vector2( 1, 10 )
+shape = SubResource( 31 )
+passby_press = true
+
+[node name="pillar2" type="TouchScreenButton" parent="tower"]
+position = Vector2( 10, 150 )
+scale = Vector2( 1, 10 )
+shape = SubResource( 32 )
+passby_press = true
+
+[node name="pillar3" type="TouchScreenButton" parent="tower"]
+position = Vector2( 80, 196.081 )
+scale = Vector2( 1, 10 )
+shape = SubResource( 33 )
+passby_press = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="tower"]
+position = Vector2( 0, -150 )
+scale = Vector2( 10, 7 )
+
+[node name="Tween2" type="Tween" parent="."]
+
+[node name="arbreMojo" type="Area2D" parent="."]
+position = Vector2( 17150, 390 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="arbremojotouch" type="TouchScreenButton" parent="arbreMojo"]
+scale = Vector2( 14, 35 )
+shape = SubResource( 34 )
+
+[node name="levelEnd" type="Area2D" parent="."]
+
+[node name="collisionEnd" type="CollisionShape2D" parent="levelEnd"]
+position = Vector2( 25410, -1060 )
+shape = SubResource( 35 )
+
+[node name="echafaudage" type="StaticBody2D" parent="."]
+
+[node name="Sprite2" type="Sprite" parent="echafaudage"]
+position = Vector2( 18540, -820 )
+texture = ExtResource( 83 )
+
+[node name="Sprite" type="Sprite" parent="echafaudage"]
+position = Vector2( 14270, 110 )
+texture = ExtResource( 84 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 13470, 400 )
+rotation = -0.698132
+shape = SubResource( 36 )
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 14330, -230 )
+rotation = -0.523599
+shape = SubResource( 37 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 15160, -440 )
+shape = SubResource( 38 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 15870, -560 )
+rotation = -0.523599
+shape = SubResource( 39 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 16790, -690 )
+shape = SubResource( 40 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 17910, -1040 )
+rotation = -0.680678
+shape = SubResource( 41 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="echafaudage"]
+position = Vector2( 19970, -1434.5 )
+rotation = -0.0174533
+shape = SubResource( 42 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 21720, -2020 )
+texture = ExtResource( 85 )
+[connection signal="body_entered" from="woodenNains" to="." method="_on_woodenNains_body_entered"]
+[connection signal="pressed" from="wooden/TouchScreenButton" to="wooden" method="_on_TouchScreenButton_pressed"]
+[connection signal="body_entered" from="wooden/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_exited" from="dragon/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="player/Timer" to="player" method="_on_Timer_timeout"]
+[connection signal="screen_exited" from="player/Visibility2D" to="." method="_on_Visibility2D_screen_exited"]
+[connection signal="area_entered" from="player/hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="pressed" from="Area2D2/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="Area2D2/TouchScreenButton" to="Area2D2" method="_on_TouchScreenButton_pressed"]
+[connection signal="tween_completed" from="Node2D/Tween" to="Node2D" method="_on_Tween_tween_completed"]
+[connection signal="pressed" from="Node2D/TouchScreenButton" to="Node2D" method="_on_TouchScreenButton_pressed"]
+[connection signal="released" from="Node2D/TouchScreenButton" to="Node2D" method="_on_TouchScreenButton_released"]
+[connection signal="body_entered" from="killermushs" to="." method="_on_killermushs_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="released" from="elevator" to="." method="_on_TouchScreenButton_released"]
+[connection signal="body_entered" from="army" to="." method="_on_army_body_entered"]
+[connection signal="pressed" from="barrel/barrelButton" to="." method="_on_barrelButton_pressed"]
+[connection signal="pressed" from="cavaliers/vavalierstouch" to="." method="_on_vavalierstouch_pressed"]
+[connection signal="screen_entered" from="cavaliers/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="body_entered" from="cavaliers/cavaliersarea" to="." method="_on_cavaliersarea_body_entered"]
+[connection signal="pressed" from="gyrocopter/gyrotouch" to="." method="_on_gyrotouch_pressed"]
+[connection signal="body_entered" from="urukwood" to="." method="_on_urukwood_body_entered"]
+[connection signal="released" from="pontlevis/spambridge" to="." method="_on_spambridge_released"]
+[connection signal="timeout" from="plongeurstimer" to="." method="_on_plongeurstimer_timeout"]
+[connection signal="timeout" from="dragonfiretimer" to="." method="_on_dragonfiretimer_timeout"]
+[connection signal="timeout" from="dragonbreathtimer" to="." method="_on_dragonbreathtimer_timeout"]
+[connection signal="timeout" from="magician3timer" to="." method="_on_magician3timer_timeout"]
+[connection signal="timeout" from="plongeurstimer3" to="." method="_on_plongeurstimer3_timeout"]
+[connection signal="timeout" from="magician4timer" to="." method="_on_magician4timer_timeout"]
+[connection signal="timeout" from="plongeurs4timer" to="." method="_on_plongeurs4timer_timeout"]
+[connection signal="tween_completed" from="cameratween" to="." method="_on_cameratween_tween_completed"]
+[connection signal="body_entered" from="checkpoint" to="." method="_on_checkpoint_body_entered"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="httpsave" to="." method="_on_httpsave_request_completed"]
+[connection signal="towerOff" from="tower" to="." method="_on_tower_towerOff"]
+[connection signal="visibility_changed" from="tower" to="." method="_on_tower_visibility_changed"]
+[connection signal="pressed" from="tower/pillar1" to="tower" method="_on_pillar1_pressed"]
+[connection signal="pressed" from="tower/pillar2" to="tower" method="_on_pillar2_pressed"]
+[connection signal="pressed" from="tower/pillar3" to="tower" method="_on_pillar3_pressed"]
+[connection signal="viewport_entered" from="tower/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_entered"]
+[connection signal="pressed" from="arbreMojo/arbremojotouch" to="." method="_on_arbremojotouch_pressed"]
+[connection signal="body_entered" from="levelEnd" to="." method="_on_levelEnd_body_entered"]
